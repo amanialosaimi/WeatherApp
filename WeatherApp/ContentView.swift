@@ -44,11 +44,13 @@ struct ContentView: View {
                 Button{
                     isDark.toggle()
                 }label: {
-                    Text("Dark Mode")
+                    Text(isDark ?  "Light Mode" : "Dark Mode")
                         .frame(width: 280,height: 50)
-                        .background(.white)
                         .font(.system(size: 20,weight: .bold, design: .default))
                         .cornerRadius(50)
+                        .background((isDark ? .gray : .white))
+                        .foregroundColor(isDark ? .white : .blue)
+
 
                 }
 
